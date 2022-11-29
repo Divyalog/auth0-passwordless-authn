@@ -8,7 +8,7 @@ export default function PageWithoutJSbasedForm() {
         
     }
     return (
-        <form action="https://auth0-passwordless-authn.herokuapp.com/profile" method="POST">
+        <form action="https://auth0-passwordless-authn.herokuapp.com/profile">
         <center><label htmlFor="company_name">Company Name</label></center>
         <center><input type="text" id="company_name" name="company_name" required /></center>
         <br></br>
