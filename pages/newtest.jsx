@@ -41,13 +41,15 @@ var options = {
   }
 };
 
+console.log(options.data);
+
 axios.request(options).then(function (response) {
   // console.log(response);
   console.log("User update successful");
   return response.data;
 }).catch(function (error) {
   console.log("User update failed");
-  console.log(error);
+  // console.log(error);
   return error;
 });
 }
