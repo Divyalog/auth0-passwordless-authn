@@ -48,6 +48,7 @@ axios.request(options).then(function (response) {
   return response.data;
 }).catch(function (error) {
   console.log("User update failed");
+  console.log(error);
   return error;
 });
 }
