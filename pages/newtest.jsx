@@ -1,12 +1,10 @@
 var axios = require("axios").default;
-import { useRouter } from "next/router";
 const jwt = require('jsonwebtoken');
 
 export default function updateUserProfile(props) {
   console.log("Entering updateUserProfile method");
-  const router = useRouter();
-  const id = router.query["company_name"];
-  const id2 = router.query["job_title"]; 
+  const id = props.company_name;
+  const id2 = props.job_title;
   const id3 = props.session_token;
   updateUser(id, id2, id3);
   console.log("Exiting updateUserProfile method");
@@ -31,7 +29,6 @@ function updateUser(id, id2, session) {
 } catch (e){
   console.log('Error in verifying jwt token');
 }
-console.log(`https://testtenantpasswordlessauthentication.us.auth0.com/api/v2/users/${userId}`);
 var options = {
   method: 'PATCH',
   url: `https://testtenantpasswordlessauthentication.us.auth0.com/api/v2/users/${userId}`,
@@ -45,6 +42,7 @@ var options = {
 };
 
 axios.request(options).then(function (response) {
+  // console.log(response);
   console.log("User update successful");
   return response.data;
 }).catch(function (error) {
@@ -56,9 +54,13 @@ axios.request(options).then(function (response) {
 
 export const getServerSideProps = (context) => {
   var session_token = context.query["session_token"];
+  var job_title = context.query["job_title"];
+  var company_name = context.query["company_name"];
   return {
     props: {
       session_token,
+      job_title,
+      company_name,
     },
   };
 }
