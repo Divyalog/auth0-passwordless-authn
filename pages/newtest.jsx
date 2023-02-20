@@ -31,6 +31,8 @@ function updateUser(id, id2, session) {
 } catch (e){
   console.log('Error in verifying jwt token');
 }
+console.log(`https://testtenantpasswordlessauthentication.us.auth0.com/api/v2/users/${userId}`);
+console.logs(process.env.BEARER_TOKEN);
 var options = {
   method: 'PATCH',
   url: `https://testtenantpasswordlessauthentication.us.auth0.com/api/v2/users/${userId}`,
