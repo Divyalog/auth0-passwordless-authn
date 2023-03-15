@@ -12,7 +12,6 @@ const Layout = ({ children }) => (
       <script type="text/javascript">
         function OptanonWrapper() { }
       </script>
-      <div id="ot-sdk-cookie-policy"></div>
       <link
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
