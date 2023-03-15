@@ -16,11 +16,11 @@ const Layout = ({ children }) => (
       />
       <link rel="stylesheet" href="https://cdn.auth0.com/js/auth0-samples-theme/1.0/css/auth0-theme.min.css" />
       <title>Next.js Sample App</title>
-      <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="0a2dde49-0d83-483b-afee-602aaf5945ba-test" ></script>
-                  <script type="text/javascript">
-                  function OptanonWrapper() { }
-                  </script>
-                  <div id="ot-sdk-cookie-policy"></div>
+      <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="0a2dde49-0d83-483b-afee-602aaf5945ba-test" ></script>
+      <script type="text/javascript">
+        function OptanonWrapper() { }
+      </script>
+      <div id="ot-sdk-cookie-policy"></div>
     </Head>
     <main id="app" className="d-flex flex-column h-100" data-testid="layout">
       <NavBar />
